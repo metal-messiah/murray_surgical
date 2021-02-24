@@ -1,0 +1,185 @@
+<!doctype html>
+<html style="height: auto;" lang="en">
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135231317-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'UA-135231317-1');
+  </script>
+  <meta charset="utf-8">
+  <title>Murray Surgical</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="../img/favicon-user-md.ico" rel="icon">
+  <link href="../img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700|Raleway:300,400,400i,500,500i,700,800,900" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="../lib/nivo-slider/css/nivo-slider.css" rel="stylesheet">
+  <link href="../lib/owlcarousel/owl.carousel.css" rel="stylesheet">
+  <link href="../lib/owlcarousel/owl.transitions.css" rel="stylesheet">
+  <!-- <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link href="../lib/animate/animate.min.css" rel="stylesheet">
+  <link href="../lib/venobox/venobox.css" rel="stylesheet">
+
+  <!-- Nivo Slider Theme -->
+  <link href="../css/nivo-slider-theme.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="../css/style.css" rel="stylesheet">
+
+  <!-- Responsive Stylesheet File -->
+  <link href="../css/responsive.css" rel="stylesheet">
+
+</head>
+
+<body style="min-height: auto;" data-spy="scroll" data-target="#navbar-example">
+
+  <div id="preloader"></div>
+
+  <header>
+      <!-- header-area start -->
+      <div id="sticker" class="header-area">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 col-sm-12">
+  
+              <!-- Navigation -->
+              <nav class="navbar navbar-default">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".bs-example-navbar-collapse-1" aria-expanded="false">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
+                  <!-- Brand -->
+                  <a class="navbar-brand page-scroll sticky-logo" href="../">
+                    <h1><span>Murray</span> Surgical</h1>
+                    <!-- Uncomment below if you prefer to use an image logo -->
+                    <!-- <img src="img/logo.png" alt="" title=""> -->
+                  </a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse main-menu bs-example-navbar-collapse-1" id="navbar-example">
+                  <ul class="nav navbar-nav navbar-right">
+                    <li>
+                      <a class="page-scroll" href="../">Home</a>
+                    </li>
+                    <li>
+                      <a class="page-scroll" href="../about">About Us</a>
+                    </li>
+                    <li>
+                      <a class="page-scroll" href="../staff">Our Staff</a>
+                    </li>
+                    <li>
+                      <a class="page-scroll" href="../surgery">Pre-Surgical Instructions</a>
+                    </li>
+                    <li>
+                      <a class="page-scroll" href="../contact">Contact Us</a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- navbar-collapse -->
+              </nav>
+              <!-- END: Navigation -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- header-area end -->
+    </header>
+    <!-- header end -->
+
+    <h2 style="margin-top: 100px; margin-bottom: 20px; padding: 0 0 0 25px">
+        <span>Appointment</span> Texts
+        
+      </h2>
+
+      
+      <form action="https://murray-surgical.herokuapp.com/api/send-sms" method="POST" id="form" style="padding: 25px 50px;">
+        <div class="form-group" style="max-width: 500px; margin: 0 auto;">
+          <input type="tel" id="to" name="to"
+          pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+          required class="form-control" aria-describedby="emailHelp" placeholder="Recipient Phone Number">
+          <small id="toHelp" class="form-text text-muted">Format as xxx-xxx-xxxx</small>
+        </div>
+        <div class="form-group" style="max-width: 500px; margin: 0 auto;">
+          <input type="text" id="name" name="name"
+          required class="form-control" aria-describedby="nameHelp" placeholder="Recipient Name">
+          <small id="nameHelp" class="form-text text-muted">Name to be inserted into the text messages</small>
+        </div>
+        <div class="form-group" style="max-width: 500px; margin: 0 auto;">
+          <input type="text" id="date" name="date"
+          required class="form-control" aria-describedby="dateHelp" placeholder="Appointment Date">
+          <small id="dateHelp" class="form-text text-muted">Scheduled Date of Appointment - ex. 2/1/2019</small>
+        </div>
+        <div class="form-group" style="max-width: 500px; margin: 0 auto;">
+          <input type="text" id="time" name="time"
+          required class="form-control" aria-describedby="timeHelp" placeholder="Appointment Time">
+          <small id="timeHelp" class="form-text text-muted">Scheduled Time of Appointment - ex. 10:00 AM</small>
+        </div>
+        <div class="form-group" style="max-width: 500px; margin: 0 auto;">
+          <input type="text" id="reason" name="reason"
+          required class="form-control" aria-describedby="reasonHelp" placeholder="Appointment Description">
+          <small id="reasonHelp" class="form-text text-muted">Description of Appointment - ex. Dental Surgery</small>
+        </div>
+        <div class="form-group" style="max-width: 500px; margin: 0 auto; display: flex; padding: 5px 0;">
+            <input type="checkbox" id="isSpanish" name="isSpanish"
+             class="form-check-input" aria-describedby="isSpanishHelp">
+            <small style="margin-left: 10px;" id="isSpanishHelp" class="form-text text-muted">Send All Texts To Client In Spanish</small>
+          </div>
+          <hr>
+        <div class="form-group" style="max-width: 500px; margin: 0 auto;">
+          <input type="password" id="authKey" name="authKey"
+          required class="form-control" aria-describedby="authKeyHelp" placeholder="Auth Key">
+          <small id="authKeyHelp" class="form-text text-muted">Secret Authentication Key</small>
+          <br />
+          <br />
+          <button style="margin: 0 auto;" id="submitButton" type="submit" class="btn btn-primary"><i id="submitIcon" class="fa fa-sms"></i> Submit</button>
+          <button style="margin: 0 auto;" id="previewButton" type="button" class="btn btn-warning"><i id="previewIcon" class="fa fa-info-circle"></i> Preview</button>
+          <button style="margin: 0 auto;" id="logsButton" type="button" class="btn btn-info"><i class="fa fa-database"></i> View Logs</button>
+        </div>
+        
+        
+        <p id="formResult" style="padding: 15px 0px;" class="text-info"></p>
+      </form>
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="../lib/jquery/jquery.min.js"></script>
+  <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="../lib/venobox/venobox.min.js"></script>
+  <script src="../lib/knob/jquery.knob.js"></script>
+  <script src="../lib/wow/wow.min.js"></script>
+  <script src="../lib/parallax/parallax.js"></script>
+  <script src="../lib/easing/easing.min.js"></script>
+  <script src="../lib/nivo-slider/js/jquery.nivo.slider.js" type="text/javascript"></script>
+  <script src="../lib/appear/jquery.appear.js"></script>
+  <script src="../lib/isotope/isotope.pkgd.min.js"></script>
+
+  <!-- Contact Form JavaScript File -->
+  <script src="../contactform/contactform.js"></script>
+
+  <script src="../js/main.js"></script>
+
+  <script src="./sms.js"></script>
+</body>
+
+</html>
